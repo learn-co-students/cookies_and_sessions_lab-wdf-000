@@ -1,0 +1,7 @@
+<form method="post" action="/products/add">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="text" name="product">
+  <input type="submit" value="add to cart">
+</form>
+
+<%= @cart.to_s %>
