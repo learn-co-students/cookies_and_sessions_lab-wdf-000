@@ -1,0 +1,13 @@
+<h1>Product#index</h1>
+<p>Find me in app/views/product/index.html.erb</p>
+
+<% if @cart %>
+<% @cart.each do |item| %>
+<%=  item %>
+<% end %>
+<% end %> 
+
+<%= form_tag '/products/add' do %>
+<%= text_field_tag 'product' %>
+<%= submit_tag 'add to cart' %>
+<% end %>
